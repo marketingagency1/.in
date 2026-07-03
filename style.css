@@ -1,0 +1,1200 @@
+/*=========================================
+RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background-image:url(ChatGPT\ Image\ Jun\ 29\,\ 2026\,\ 07_50_35\ PM.png);
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+@media (max-width:768px){
+
+    body{
+
+        background-attachment:scroll;
+
+        background-size:cover;
+
+        background-position:center;
+
+    }
+
+}
+    
+   
+
+/*=========================================
+BACKGROUND GLOW
+=========================================*/
+
+.bg-glow{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+    opacity:.45;
+
+    z-index:-2;
+
+}
+
+.bg-glow.one{
+
+    width:380px;
+    height:380px;
+
+    background:#19c8ff;
+
+    top:-120px;
+    left:-120px;
+
+}
+
+.bg-glow.two{
+
+    width:340px;
+    height:340px;
+
+    background:#005dff;
+
+    right:-120px;
+    bottom:-120px;
+
+}
+
+
+/*=========================================
+WRAPPER
+=========================================*/
+
+.wrapper{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:10px;
+
+}
+
+
+/*=========================================
+CARD
+=========================================*/
+
+.card{
+
+    width:450px;
+
+    max-width:100%;
+
+    background:#08182d;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 0 0 1px rgba(255,255,255,.03),
+
+    0 0 35px rgba(0,170,255,.16),
+
+    0 20px 60px rgba(0,0,0,.55);
+
+}
+
+
+/*=========================================
+CARD SHINE
+=========================================*/
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-30px;
+
+left:-170%;
+
+width:180%;
+
+height:120px;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.08),
+
+transparent
+
+);
+
+transform:rotate(-8deg);
+
+animation:cardshine 7s linear infinite;
+
+}
+
+@keyframes cardshine{
+
+0%{
+
+left:-170%;
+
+}
+
+100%{
+
+left:180%;
+
+}
+
+}
+
+
+/*=========================================
+LOGO
+=========================================*/
+
+.logo-box{
+
+width:140px;
+
+height:140px;
+margin-bottom: 10px;
+
+margin:auto;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(
+145deg,
+
+);
+
+
+
+animation:logoPulse 3s ease-in-out infinite;
+
+box-shadow:
+
+0 0 20px rgba(0,180,255,.85),
+
+0 0 55px rgba(0,180,255,.35);
+
+}
+
+.logo{
+
+width:118px;
+
+height:118px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+
+/*=========================================
+LOGO ANIMATION
+=========================================*/
+
+@keyframes logoPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+/*=========================================
+BADGE
+=========================================*/
+
+.badge{
+
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin-top:20px;
+
+margin-bottom:18px;
+
+padding:11px 24px;
+
+border-radius:50px;
+
+font-size:17px;
+
+font-weight:600;
+
+color:#3ebeff;
+
+background:#102b63;
+
+box-shadow:
+
+0 0 15px rgba(0,140,255,.20);
+
+}
+/*=========================================
+HEADING
+=========================================*/
+
+h1{
+
+    font-size:36px;
+    font-weight:800;
+    line-height:1.18;
+    color:#ffffff;
+    margin-bottom:16px;
+    letter-spacing:-.5px;
+
+}
+
+h1 span{
+
+    color:#ffffff;
+    font-weight:700;
+
+}
+
+h1 strong{
+
+    display:inline;
+    margin-top:8px;
+    color:#1fb8ff;
+    font-size:31px;
+    font-weight:800;
+
+    text-shadow:
+    0 0 10px rgba(31,184,255,.55),
+    0 0 22px rgba(31,184,255,.30);
+
+}
+.strong{
+    color: #48c5ff;
+    font-size: 30px;
+    word-spacing: 10px;
+    padding-top: 10px;
+}
+
+/*=========================================
+PARAGRAPH
+=========================================*/
+
+p{
+
+    font-size:16px;
+
+    line-height:1.65;
+
+    color:#b9c9dc;
+
+    margin-bottom:26px;
+
+}
+
+
+/*=========================================
+BUTTONS
+=========================================*/
+
+.btn{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    padding:16px;
+
+    margin-top:16px;
+
+    border-radius:18px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+}
+
+
+/*=========================================
+PRIMARY BUTTON
+=========================================*/
+
+.primary{
+
+    background:linear-gradient(
+    135deg,
+    #12a8ff,
+    #35d6ff
+    );
+
+    box-shadow:
+
+    0 0 20px rgba(0,190,255,.55),
+
+    0 0 40px rgba(0,190,255,.25);
+
+}
+
+
+/*=========================================
+SECOND BUTTON
+=========================================*/
+
+.secondary{
+
+    background:linear-gradient(
+    135deg,
+   
+    );
+
+    box-shadow:
+
+    0 0 20px rgba(0,150,255,.45),
+
+    0 0 40px rgba(0,150,255,.22);
+
+}
+
+
+/*=========================================
+BUTTON SHINE
+=========================================*/
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-130%;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,.65),
+
+transparent
+
+);
+
+transform:skewX(-22deg);
+
+animation:shine 2.6s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-130%;
+
+}
+
+100%{
+
+left:180%;
+
+}
+
+}
+
+
+/*=========================================
+AUTO GLOW
+=========================================*/
+
+.btn{
+
+animation:buttonGlow 2.2s ease-in-out infinite;
+
+}
+
+@keyframes buttonGlow{
+
+0%{
+
+transform:scale(1);
+
+filter:brightness(1);
+
+}
+
+50%{
+
+transform:scale(1.02);
+
+filter:brightness(1.12);
+
+}
+
+100%{
+
+transform:scale(1);
+
+filter:brightness(1);
+
+}
+
+}
+
+
+/*=========================================
+BUTTON HOVER
+=========================================*/
+
+.btn:hover{
+
+transform:translateY(-4px) scale(1.03);
+
+box-shadow:
+
+0 0 30px rgba(0,195,255,.85),
+
+0 0 70px rgba(0,195,255,.35);
+
+}
+
+
+/*=========================================
+BUTTON ACTIVE
+=========================================*/
+
+.btn:active{
+
+transform:scale(.97);
+
+}
+
+.btn:focus{
+
+outline:none;
+
+}
+/*=========================================
+TEXT SELECTION
+=========================================*/
+
+::selection{
+    background:#20b8ff;
+    color:#fff;
+}
+
+/*=========================================
+SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08182d;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#20b8ff;
+    border-radius:30px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#4fd6ff;
+}
+
+/*=========================================
+LINK RESET
+=========================================*/
+
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+/*=========================================
+CARD HOVER
+=========================================*/
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.60),
+    0 0 55px rgba(0,180,255,.22);
+
+}
+
+/*=========================================
+LAPTOP
+=========================================*/
+
+@media (max-width:1200px){
+
+.card{
+
+    width:390px;
+
+}
+
+}
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.card{
+
+    width:380px;
+
+    padding:22px;
+
+}
+
+.logo-box{
+
+    width:125px;
+    height:125px;
+
+}
+
+.logo{
+
+    width:108px;
+    height:108px;
+
+}
+
+.badge{
+
+    font-size:16px;
+
+    padding:10px 22px;
+
+}
+
+h1{
+
+    font-size:33px;
+
+}
+
+h1 strong{
+
+    font-size:28px;
+
+}
+
+p{
+
+    font-size:15px;
+
+}
+
+.btn{
+
+    font-size:17px;
+
+    padding:15px;
+
+}
+
+}
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+body{
+    padding:8px;
+}
+
+.wrapper{
+    padding:8px;
+    gap:12px;
+}
+
+.card{
+
+    width:315px;
+    max-width:100%;
+
+    padding:16px;
+
+    border-radius:22px;
+
+}
+
+.logo-box{
+
+    width:88px;
+    height:88px;
+
+}
+
+.logo{
+
+    width:76px;
+    height:76px;
+
+}
+
+.badge{
+
+    margin-top:14px;
+    margin-bottom:14px;
+
+    padding:8px 16px;
+
+    font-size:13px;
+
+}
+
+h1{
+
+    font-size:24px;
+    line-height:1.2;
+    margin-bottom:12px;
+
+}
+
+h1 strong{
+
+    display:inline;
+    font-size:24px;
+
+}
+
+.strong{
+
+    font-size:24px;
+    word-spacing:2px;
+    padding-top:6px;
+
+}
+
+p{
+
+    font-size:13px;
+    line-height:1.55;
+    margin-bottom:18px;
+
+}
+
+.btn{
+
+    font-size:16px;
+    padding:13px;
+    border-radius:14px;
+    margin-top:10px;
+
+}
+
+.disclaimer{
+
+    width:315px;
+    max-width:100%;
+
+    padding:12px;
+
+}
+
+.disclaimer h3{
+
+    font-size:18px;
+
+}
+
+.disclaimer p{
+
+    font-size:12px;
+
+}
+
+}
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media(max-width:480px){
+
+
+.card{
+
+    width:315px;
+
+    max-width:100%;
+
+    padding:16px;
+
+}    
+
+.logo-box{
+
+    width:88px;
+
+    height:88px;
+
+}
+.logo{
+
+    width:76px;
+
+    height:76px;
+
+}
+.badge{
+
+    font-size:13px;
+
+    padding:8px 16px;
+
+}
+
+
+
+h1{
+
+    font-size:24px;
+
+}
+
+h1 strong{
+
+    font-size:24px;
+
+}
+
+.btn{
+
+    font-size:16px;
+
+    padding:14px;
+
+}
+
+}
+
+/*=========================================
+EXTRA SMALL
+=========================================*/
+
+@media(max-width:360px){
+
+.card{
+
+    width:295px;
+
+    max-width:100%;
+
+    padding:15px;
+
+}    
+
+
+
+.logo-box{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.logo{
+
+    width:80px;
+
+    height:80px;
+
+}
+
+.badge{
+
+    font-size:13px;
+
+    padding:8px 15px;
+
+}
+
+h1{
+
+    font-size:23px;
+
+}
+
+h1 strong{
+
+    font-size:19px;
+
+}
+
+p{
+
+    font-size:14px;
+
+}
+
+.btn{
+
+    font-size:15px;
+
+    padding:13px;
+
+}
+
+}
+/*=========================================
+FINAL OPTIMIZATION
+=========================================*/
+
+body{
+    animation:fadeBody .8s ease;
+}
+
+@keyframes fadeBody{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+/*=========================================
+BUTTON SMOOTHNESS
+=========================================*/
+
+.btn,
+.logo-box,
+.card{
+
+    will-change:transform;
+
+}
+
+
+/*=========================================
+PREVENT IMAGE DRAG
+=========================================*/
+
+img{
+
+    user-select:none;
+    -webkit-user-drag:none;
+    pointer-events:auto;
+
+}
+
+
+/*=========================================
+CARD BORDER GLOW
+=========================================*/
+
+.card::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:30px;
+
+pointer-events:none;
+
+border:1px solid rgba(255,255,255,.04);
+
+box-shadow:
+
+inset 0 0 25px rgba(255,255,255,.02),
+
+0 0 45px rgba(0,180,255,.08);
+
+}
+
+
+/*=========================================
+LOGO HOVER
+=========================================*/
+
+.logo-box:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+
+0 0 25px rgba(0,195,255,.9),
+
+0 0 70px rgba(0,195,255,.45);
+
+}
+
+
+/*=========================================
+BADGE HOVER
+=========================================*/
+
+.badge{
+
+transition:.35s;
+
+}
+
+.badge:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+
+0 0 25px rgba(0,170,255,.25);
+
+}
+
+
+/*=========================================
+BUTTON TRANSITION
+=========================================*/
+
+.btn{
+
+cursor:pointer;
+
+transition:
+
+transform .35s,
+
+box-shadow .35s,
+
+filter .35s,
+
+background .35s;
+
+}
+
+
+/*=========================================
+CARD MOBILE FIX
+=========================================*/
+
+@media (max-height:750px){
+
+.wrapper{
+
+padding:20px 10px;
+
+align-items:flex-start;
+
+}
+
+}
+
+
+/*=========================================
+SMALL LAPTOP FIX
+=========================================*/
+
+@media (max-width:1366px){
+
+.card{
+
+transform:scale(.95);
+
+}
+
+.card:hover{
+
+transform:scale(.97);
+
+}
+
+}
+
+
+/*=========================================
+LARGE SCREEN FIX
+=========================================*/
+
+@media (min-width:1600px){
+
+.card{
+
+transform:scale(1);
+
+}
+
+}
+
+
+/*=========================================
+END
+=========================================*/
+
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+}
+
+.disclaimer{
+
+    width:100%;
+
+    max-width:1400px;   /* Ya 1600px agar aur lamba chahiye */
+
+    margin:20px auto;
+
+    padding:20px 25px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:12px;
+
+    background:rgba(8,24,45,.45);
+
+    backdrop-filter:blur(8px);
+
+    color:#d7d7d7;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+.countdown-box{
+    text-align: center;
+    margin: 15px 0 20px;
+}
+
+#countdown{
+    font-size: 42px;      /* Pehle 58px tha */
+    font-weight: 700;
+    color: #2ef7b0;
+    line-height: 1;
+
+    /* Glow hata diya */
+    text-shadow: none;
+}
+
+.countdown-box p{
+    margin-top: 8px;
+    font-size: 14px;      /* Pehle 17px tha */
+    font-weight: 500;
+    color: #bdbdbd;
+}
