@@ -193,7 +193,7 @@ btn.style.filter="brightness(1)";
 // ===============================
 // 5 Second Countdown
 
-let seconds = 59;
+let seconds = 5;
 
 // Ye wahi link hona chahiye jo "See Ads Proofs" button ka hai.
 const redirectURL = "https://t.me/+PrLuWP-LxPk2NjI1"; // Change this
